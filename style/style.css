@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: lightgreen;
+}
+
+header, main{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+h1 {padding: 8px 10px;}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 13px 0;
+}
+
+section{
+    flex:  1;
+}
+
+.produk-section{
+    margin-bottom: 20px;
+}
+
+.card-produk{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 100px;
+    padding: 9px;
+    margin-bottom: 12px;
+    border: 2px solid green;
+    border-radius: 6px;
+}
+
+.card-produk img{
+    width: 80px;
+    border: 1px solid green;
+    margin-right: 10px;
+}
+
+.data-utama{
+    display: flex;
+    flex: 3;
+    height: 100%;
+}
+
+.data-produk h3, .data-produk p {
+    margin-bottom: 3px;
+}
+
+.data-produk h3 {font-size: 15px;}
+
+.data-produk p {font-size: 12px;}
+
+.price {
+    flex: 0.6;
+    font-size: 18px;
+}
+
+.quantity{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    border: 2px solid green;
+    background-color: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px;
+    height: 35px;
+}
+
+.quantity button{
+    background-color: transparent;
+    border: none;
+    font-size: 1.25rem;
+    margin: 0 6px;
+    cursor: pointer;
+}
+
+.quantity button:hover{
+    color: blue;
+}
+
+.quantity input {
+    width: 100%;
+    text-align: center;
+    border: none;
+    font-size: 18px;
+    outline: none;
+}
+
+.order-section{
+    background-color: #ccc;
+    padding: 0 13px;
+    height: max-content;
+    border-radius: 5px;
+}
+
+.order-section h2 {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+.order-section input, .order-section button{
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    border-radius: 3px;
+}
+
+.order-section button{
+    border: none;
+}
+
+#apply{
+    color: white;
+    background-color: green;
+    margin-bottom: 25px;
+}
+
+#reset{
+    margin-top: 3px;
+    background-color: red;
+}
+
+#output{
+    display: none;
+    margin-bottom: 25px;
+}
+
+#output ol{
+    margin-left: 22px;
+}
+
+#output li{
+    margin-bottom: 10px;
+}
+
+#output li p {
+    display: flex;
+    font-size:  1rem;
+}
+
+#output #subtotalHarga{
+    flex: 1;
+}
+
+.total-harga{
+    display: flex;
+    margin-left: 6px;
+    font-size: 1.25rem;
+}
+
+.total-harga p:first-child{
+    flex: 6;
+    font-weight: bold;
+}
+
+.total-harga #totalHargaAwal{
+    text-decoration: line-through;
+    color: lightgreen;
+}
+
+.total-harga #totalHargaAwal, .total-harga #totalHargaAkhir{
+    flex: 1;
+    color: lightgreen;
+}
+
+@media screen and (max-width: 768px) {
+    html{
+        font-size: 85%;
+    }
+    
+    main{
+        display: block;
+    }
+
+    .order-section input , .order-section button{
+        height: 40px;
+    }
+
+    .card-produk{height: 88px;}
+
+    .card-produk img {width: 68px;}
+
+    .data-produk h3, .data-produk p {
+        margin-bottom: 1.5px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .data-utama{
+        flex: 2.5;
+    }
+} 
